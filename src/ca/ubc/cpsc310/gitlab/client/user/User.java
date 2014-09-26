@@ -1,6 +1,7 @@
 package ca.ubc.cpsc310.gitlab.client.user;
 
 import java.util.ArrayList;
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -19,7 +20,11 @@ public class User implements IUser {
 	private final String WISHLIST = "WISHLIST";
 	private final String SHOPPINGCART = "SHOPPINGCART";
 	
+	
+	private List<ProductItem> shoppingCart = new ArrayList<ProductItem>();
+	private List<ProductItem> wishList = new ArrayList<ProductItem>();
 	private Map<String, Object> data = new HashMap<String, Object>();
+	
 	public User()
 	{
 		data.put(WISHLIST, new ArrayList<Object>());
@@ -80,4 +85,7 @@ public class User implements IUser {
 	}
 
 	
+
+
+
 }
